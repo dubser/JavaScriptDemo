@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panneau de contrôle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="control-panel">
+        <h2>Panneau de contrôle</h2>
+        <div class="control-item">
+            <label for="slider">Volume</label>
+            <input type="range" id="slider" min="0" max="100" value="50">
+            <span id="sliderValue">50</span>
+        </div>
+        <div class="control-item">
+            <label for="toggle">Mode sombre</label>
+            <input type="checkbox" id="toggle">
+        </div>
+        <div class="control-item">
+            <button id="alertButton">Afficher un message</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
