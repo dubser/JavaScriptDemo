@@ -6,12 +6,22 @@ let text = "Affichage des résultats. ";
 
 function ecrire() {
      /*utilisé*/
+    let max_age=36000;
+    let days = 1;
+
     console.log( Date() + " Bouton Ecrire Cookie CookName: " +CookkName
     +"  "+CookValue);
     document.getElementById("ListWindow").innerHTML = Date() + "<br>" +
     "Écrire Cookie cliqué : " +CookkName
     +"  "+CookValue;
-    document.cookie = CookkName+"="+ CookValue;
+   /* document.cookie = CookkName+"="+ CookValue + ";" + "path=/" ; */
+    /* document.cookie = CookkName+"="+ CookValue + ";Max-Age="+ max_age  +"path=/" ;*/
+
+      var expire = new Date ();
+      
+      expire.setTime (expire.getTime() + (24 * 60 * 60 * 1000) * days);
+      document.cookie = CookkName + "=" + CookValue + "; expires=" +expire.toGMTString();
+
     lire();
 }
 
@@ -28,19 +38,11 @@ function lire() {
       }    
 }
 
-function lireTout() {
-     /*Pas utilisé*/
-        document.getElementById("ListWindow").innerHTML = Date() +
-        " La fonction LireTout s'active! "+ CookkName ;  
-        console.log(document.cookie);
-
-        document.getElementById("ListWindow").innerHTML = document.cookie
-}
 function supprimer() {
-     /*Pas utilisé*/
-    alert("Supprimer Cookie a été cliqué !");
-   /* document.getElementById("ListWindow").innerHTML = text;*/
-    document.cookie = "username=CookkName; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+     /*utilisé*/
+  
+  document.cookie = CookkName+"="+ CookValue + ";"+ "Max-Age=-1" +"path=/" ;
+  lire();
 }
 
 /* Fonction qui demande le nom du Cookie a traiter*/
@@ -99,11 +101,13 @@ function RefreshInput() {
 
  }
 
-function test() {
-  /*Pas utilisé*/
- alert("test a été cliqué !");
- RefreshInput()
-/* document.getElementById("ListWindow").innerHTML = text;*/
+ function test() {
+    /*utilisé*/
 
-}
-  
+ alert("test a été cliqué !");
+
+/*function SetCookie(name, value, days) 
+https://javascript.developpez.com/faq/javascript/?page=navig#cookies*/
+
+ 
+ }
