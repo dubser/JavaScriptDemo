@@ -5,7 +5,6 @@ let ListString = " ";         /* Contenu a afficher dans ListWindow*/
 let text = "Affichage des résultats. ";
 
 function ecrire() {
-     /*utilisé*/
     let max_age=36000;
     let days = 1;
 
@@ -26,7 +25,6 @@ function ecrire() {
 }
 
 function lire() {
-     /*utilisé*/
      let tmp=" ";
     tmp= document.cookie 
     if(tmp==""){
@@ -39,36 +37,12 @@ function lire() {
 }
 
 function supprimer() {
-     /*utilisé*/
   
   document.cookie = CookkName+"="+ CookValue + ";"+ "Max-Age=-1" +"path=/" ;
   lire();
 }
 
-/* Fonction qui demande le nom du Cookie a traiter*/
-function GetCokName() {
-     /*Pas utilisé*/
-    let tmp=" ";
-    alert("Le nom du cookie est: "+CookkName);
 
-    tmp = prompt("Saisir le nom du Cookie  ", CookkName);
-    if (tmp!=null)CookkName=tmp;
-    /*alert("Le nom du cookie est: "+CookkName);*/
-    
-
-    tmp = prompt("Saisir la valeur du cookie.", CookValue);
-    if (tmp!=null)CookValue=tmp;
-
-    /*alert("La valeur du cookie est: "+CookValue );*/
-
-    document.getElementById("CokName").innerHTML = CookkName;
-    if(CookkName =="*"){ 
-        alert(" Le Joker * est utilisé");
-        document.getElementById("ListWindow").innerHTML = Date()  
-        +"<br>" + " Le joker * est utilisé comme nom de cookie.! ";
-        lireTout();
-    }  
-}
 
 /* Demande le nom du Cookie a traiter*/ 
   /*utilisé*/ 
@@ -83,7 +57,6 @@ function GetCokNam(event) {
 }
 
 /* Demande la valeur du Cookie a traiter*/
-/*utilisé*/
 function GetCokValue(event) {
       let tmp=document.getElementById('cookValuIn');
       /*alert("Value " + tmp.value);*/
@@ -93,7 +66,6 @@ function GetCokValue(event) {
   }
 
 function RefreshInput() {
-  /*utilisé*/
   /*Rafraichit les fenetre de saisies*/
 
  document.getElementById('cookNameIn').value=CookkName;
@@ -102,7 +74,6 @@ function RefreshInput() {
  }
 
  function test() {
-    /*utilisé*/
 
  alert("test a été cliqué !");
 
