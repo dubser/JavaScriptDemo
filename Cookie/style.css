@@ -23,33 +23,6 @@ body {
     margin-bottom: 15px;
 } 
 
-#CokN{ 
-        display:flex;
-        margin-bottom: 4px ;
-        height: 35px;
-        overflow-wrap: break-word;
-#CokNameLabel{
-    width: 25%;
-    background-color: #82e387;
-    height: 25px;
-    font-weight: bold;
-    
-}
-#CokName{
-    width:25%;
-    height: 25px;
-    background-color: #1f8f39;
-    margin-left: 15px ;
-    font-weight:bolder;
-}
-#ButName{
-    width:25%;
-    margin-top: -10px ;
-    margin-left: 15px ;
-}
-
-}
-
 #ListWindow {
     margin-bottom: 15px;
     background-color : #09eb14;
